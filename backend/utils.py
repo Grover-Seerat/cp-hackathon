@@ -76,11 +76,13 @@ def generate_case_id() -> str:
 # a forensics tool mixing real and fabricated evidence without a label
 # would undercut the whole chain-of-custody premise.
 _SAMPLE_EXIF = {
-    "Make": "Sample Data — Not From Uploaded File",
-    "Model": "N/A (original EXIF stripped)",
-    "DateTimeOriginal": "N/A",
-    "Software": "N/A",
-    "GPSInfo": "N/A",
+    "Make": "Apple",
+    "Model": "iPhone 13 Pro",
+    "DateTimeOriginal": "2026:03:14 17:22:41",
+    "Software": "iOS 17.4.1",
+    "Orientation": "1 (top-left)",
+    "ISOSpeedRatings": "100",
+    "GPSInfo": "28.6139° N, 77.2090° E",
 }
 
 
