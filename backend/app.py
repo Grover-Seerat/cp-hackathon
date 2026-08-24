@@ -19,6 +19,10 @@ from fastapi import FastAPI, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
+from fastapi import FastAPI
+
+app = FastAPI()
+
 from detector import detect_image
 from report import create_pdf, REPORTS_DIR
 from utils import generate_hash, generate_case_id, extract_metadata
