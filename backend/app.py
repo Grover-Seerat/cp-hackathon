@@ -18,20 +18,6 @@ from datetime import datetime, timezone
 from fastapi import FastAPI, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
-import json
-import os
-import sqlite3
-from datetime import datetime, timezone
-
-from fastapi import FastAPI, UploadFile, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
-
-from detector import detect_image
-from report import create_pdf, REPORTS_DIR
-from utils import generate_hash, generate_case_id, extract_metadata
-
-app = FastAPI(title="TruthTrace AI", version="0.1.0")
 
 from detector import detect_image
 from report import create_pdf, REPORTS_DIR
@@ -46,9 +32,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app = FastAPI(title="TruthTrace AI", version="0.1.0")
-DB_PATH = os.path.join("/tmp", "truthtrace.db")
-# DB_PATH = os.path.join(os.path.dirname(__file__), "truthtrace.db")
+
+DB_PATH = os.path.join(os.path.dirname(__file__), "truthtrace.db")
 SAMPLE_TIMELINE_PATH = os.path.join(
     os.path.dirname(__file__), "..", "sample_data", "timeline.json"
 )
