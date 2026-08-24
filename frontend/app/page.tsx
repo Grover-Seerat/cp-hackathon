@@ -326,7 +326,7 @@ export default function Home() {
           {data && <EvidenceTag caseId={data.case_id} result={data.result} />}
 
           {data && (
-            
+            <a
               href={reportDownloadUrl(data.report_url)}
               className="block rounded border border-hairline bg-surface px-4 py-3 text-center text-sm font-medium text-paper hover:border-stamp hover:text-stamp transition-colors"
             >
